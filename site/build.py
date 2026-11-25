@@ -15,6 +15,7 @@ if (styles_found, script_found) != (1, 1):
 assets = [
     ('logo.png', 'image/png'),
     ('pastors.png', 'image/png'),
+    ('hero-church.jpg', 'image/jpeg'),
     ('fonts/ActayWide-Bold.otf', 'font/otf'),
     ('fonts/helvetica_boldcyrusbyme.otf', 'font/otf'),
 ]

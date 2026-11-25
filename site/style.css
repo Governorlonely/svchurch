@@ -174,3 +174,85 @@ strong,b,.brand-tagline,.eyebrow,.button,.chip.active{
 .local-page .content{max-width:1040px}.local-intro{max-width:780px}.local-page .info-grid{align-items:stretch}.local-page .info-grid .card h3{font-size:clamp(22px,2.3vw,30px);line-height:1.3}.local-page .info-grid .card{justify-content:center}.local-page .info-grid .button{margin-top:18px;width:auto}.local-pastor{max-width:480px!important;margin-top:25px}.local-page h2{margin-top:64px}.ministry-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:28px 0}.ministry-grid .card h3{font-size:25px}.ministry-grid .card p{font-size:15px}.age-groups{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}.age-groups span{display:inline-flex;align-items:center;padding:14px 20px;background:linear-gradient(135deg,#ffffffb5,#f1dfcf75);border:1px solid #ffffffd9;box-shadow:inset 0 1px 0 #fff,0 5px 20px #48332408;border-radius:18px;backdrop-filter:blur(14px)}.action-row{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}.muted{font-size:13px!important;color:#827265}.pending-links{line-height:2}.donation-choice{display:flex;justify-content:space-between;gap:16px;align-items:center;border:1px solid #ddd0c2;border-radius:18px;padding:20px;background:linear-gradient(140deg,#ffffffa8,#f0e5d95c);box-shadow:inset 0 1px 0 #fff;backdrop-filter:blur(15px);font-size:14px;transition:border-color .2s,background .2s}.donation-choice:hover{border-color:#dc9065}.donation-choice.active{border-color:#d46b39;background:linear-gradient(145deg,#fff7efe8,#f5dac6b8);box-shadow:inset 0 1px 0 #fff,0 5px 20px #a4632220}.donation-choice>span:last-child{flex-shrink:0;color:#ad4e29}.donation-panel{padding:30px;border:1px solid #fff;border-radius:24px;background:linear-gradient(130deg,#ffffffa8,#f0e5d968);box-shadow:inset 0 1px 0 #fff,0 8px 25px #48332408;backdrop-filter:blur(20px)}.donation-panel h3{font-size:25px;line-height:1.3}.donation-panel label{max-width:340px}.donation-panel .button{margin:12px 0}.footer-links{grid-template-columns:repeat(5,minmax(0,1fr));gap:24px}.footer-links>div{min-width:0}.footer-links a{overflow-wrap:anywhere}
 @media(max-width:1050px){.footer-links{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:760px){.ministry-grid{grid-template-columns:minmax(0,1fr)}.local-page h2{margin-top:45px}.local-page .info-grid .card h3{font-size:24px}.donation-panel{padding:22px}.donation-panel .button{white-space:normal;max-width:100%}.footer-links{grid-template-columns:repeat(2,minmax(0,1fr))}.age-groups{gap:8px}.age-groups span{font-size:14px;padding:12px 16px}}
+
+/* ---- Compact light header + full-width photo hero ---- */
+html{scroll-padding-top:72px}
+header{height:72px;min-height:72px;padding:0 4.5%;gap:24px;background:#fff;border-bottom:1px solid #ece8e2;box-shadow:0 2px 12px rgba(35,28,22,.05);-webkit-backdrop-filter:none;backdrop-filter:none}
+header .brand{gap:0;flex-shrink:0}
+header .brand-logo{width:132px}
+header .brand-tagline{display:none}
+header nav{gap:clamp(12px,1.4vw,22px);font-family:'Church Helvetica Bold',Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:1.3px;text-transform:uppercase;color:#4d453e}
+header nav>a,header nav .dropdown>a{white-space:nowrap}
+header nav .dropdown>a small{font-size:11px}
+header nav>.button.small{padding:0;min-height:0;gap:0;background:none;border:0;border-radius:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;color:inherit;font:inherit;letter-spacing:inherit;text-transform:uppercase;font-family:inherit}
+header nav>.button.small:hover{background:none;color:#e86b38;transform:none;box-shadow:none}
+.header-actions{display:flex;align-items:center;gap:20px;flex-shrink:0;margin-left:auto}
+.account-link{display:flex;align-items:center;gap:8px;font-family:'Church Helvetica Bold',Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:1.3px;color:#5a5149;white-space:nowrap}
+.account-link svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6}
+.account-link:hover{color:#e86b38}
+header .mobile{display:flex;align-items:center;gap:9px;width:auto;height:auto;padding:0;border:0;border-radius:0;background:none;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;font-family:'Church Helvetica Bold',Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:1.3px;color:#2f2924;text-transform:uppercase}
+.menu-lines{display:grid;gap:4px;width:19px}
+.menu-lines i{display:block;height:2px;background:currentColor;border-radius:2px}
+.menu-lines i:last-child{width:70%;justify-self:end}
+header .mobile:hover{color:#e86b38}
+.menu-overlay{position:fixed;inset:72px 0 0;z-index:30;background:rgba(29,25,22,.55);opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}
+.menu-overlay.open{opacity:1;visibility:visible}
+.menu-overlay-inner{background:#fff;max-height:100%;overflow:auto;padding:36px 4.5% 60px;box-shadow:0 18px 40px rgba(0,0,0,.18)}
+.menu-close{display:block;margin-left:auto;padding:0 0 8px;border:0;background:none;font-family:'Church Helvetica Bold',Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:1.6px;color:#6b6057}
+.menu-close span{font-size:15px;margin-left:8px}
+.menu-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px}
+.menu-grid>div{display:flex;flex-direction:column;gap:13px;min-width:0}
+.menu-grid>div>span{font-family:'Church Helvetica Bold',Helvetica,Arial,sans-serif;font-size:10px;letter-spacing:2px;color:#e86b38;margin-bottom:8px}
+.menu-grid a{font-family:'Actay Wide',Helvetica,Arial,sans-serif;font-size:20px;line-height:1.25;letter-spacing:-.02em}
+.menu-grid a:hover{color:#e86b38}
+.hero{display:block;min-height:clamp(640px,78vh,820px);padding:0;border:0;background:none;color:#fff;position:relative;overflow:hidden}
+.hero:before{content:'';position:absolute;inset:0;background:url('assets/hero-church.jpg') center 45%/cover no-repeat}
+.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,18,24,.88) 0%,rgba(16,22,28,.70) 38%,rgba(16,22,28,.18) 100%)}
+.hero-inner{position:relative;z-index:2;max-width:780px;padding:96px 4.5% 130px}
+.hero .eyebrow.dot{color:#fff;font-size:10px;letter-spacing:2.4px}
+.hero .eyebrow.dot:before{color:#ff8b50}
+.hero h1{color:#fff;font-size:clamp(56px,6vw,94px);line-height:1.04;letter-spacing:-.045em;margin:24px 0 22px;max-width:720px}
+.hero h1 em{display:inline;color:#fff}
+.hero-subtitle{color:#fff;font-family:'Actay Wide',Helvetica,Arial,sans-serif;font-size:clamp(20px,2vw,27px);line-height:1.25;letter-spacing:-.02em;margin:0 0 16px;max-width:560px}
+.hero-copy{color:rgba(255,255,255,.82);font-size:14px;line-height:1.65;max-width:560px;margin:0 0 26px}
+.find-location{display:inline-flex;align-items:center;gap:9px;color:#fff;font-size:13px;font-weight:700;border-bottom:1px solid rgba(255,255,255,.8);padding-bottom:5px;margin-bottom:28px}
+.find-location svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.7}
+.hero-select{position:relative;max-width:470px}
+.hero-select:after{content:'⌄';position:absolute;right:20px;top:50%;transform:translateY(-55%);font-size:20px;color:#3d342d;pointer-events:none}
+.hero-select select{appearance:none;-webkit-appearance:none;width:100%;height:58px;padding:0 52px 0 22px;background:#fff;border:1px solid rgba(255,255,255,.7);border-radius:8px;color:#2f2924;font-size:16px;font-weight:600;box-shadow:0 10px 30px rgba(0,0,0,.18);cursor:pointer}
+.hero-video{position:absolute;right:4.5%;bottom:34px;z-index:2;display:flex;align-items:center;gap:14px;padding:8px 18px 8px 8px;background:rgba(20,24,28,.48);border:1px solid rgba(255,255,255,.28);border-radius:4px;color:#fff;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);transition:background .2s}
+.hero-video:hover{background:rgba(20,24,28,.72)}
+.hero-video-thumb{position:relative;display:block;width:112px;height:66px;flex-shrink:0;border-radius:2px;background:url('assets/hero-church.jpg') center/cover no-repeat}
+.hero-video-thumb:after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.25)}
+.hero-video-thumb .play{position:absolute;z-index:1;left:50%;top:50%;transform:translate(-50%,-50%);width:30px;height:30px;border-radius:50%;background:#fff;color:#222;display:grid;place-items:center;font-size:11px;padding-left:2px}
+.hero-video-text{display:flex;flex-direction:column;gap:4px}
+.hero-video-text small{font-size:9px;letter-spacing:1.6px;color:rgba(255,255,255,.75)}
+.hero-video-text strong{font-family:'Actay Wide',Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:-.02em}
+@media(max-width:1250px){
+  header nav{display:none}
+  header .mobile{display:flex}
+  header .brand-tagline{display:none}
+  .hero-video{right:6%;bottom:26px}
+}
+@media(max-width:760px){
+  header{height:auto;min-height:76px;padding:12px 6%}
+  header .brand-logo{width:116px}
+  .header-actions{gap:14px}
+  .account-link span{display:none}
+  .menu-overlay{top:76px}
+  .menu-overlay-inner{padding:28px 6% 50px}
+  .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+  .hero{min-height:680px}
+  .hero-inner{padding:72px 6% 150px;max-width:100%}
+  .hero h1{font-size:clamp(42px,10vw,62px)}
+  .hero-subtitle{font-size:19px}
+  .hero-copy{font-size:13px}
+  .hero-video{left:6%;right:6%;bottom:26px}
+  .hero-video-thumb{width:88px;height:54px}
+  .hero-video-text strong{font-size:13px}
+}
+@media(max-width:420px){
+  .menu-grid{grid-template-columns:minmax(0,1fr)}
+  .hero h1{font-size:40px}
+  .hero-select select{height:54px;font-size:15px}
+}
