@@ -24,7 +24,8 @@ for name, mime in assets:
     data_url = 'data:' + mime + ';base64,' + base64.b64encode(data).decode('ascii')
     html = html.replace('assets/' + name, data_url)
 
-# One current standalone deliverable.
-output = site / 'index.html'
-output.write_text(html, encoding='utf-8')
-print(f'Built {output.name} ({len(html):,} characters).')
+# One current standalone deliverable, published both at the site root and
+# in site/ so static hosts (Netlify, GitHub Pages) find index.html.
+for output in (workspace / 'index.html', site / 'index.html'):
+    output.write_text(html, encoding='utf-8')
+    print(f'Built {output.relative_to(workspace)} ({len(html):,} characters).')
