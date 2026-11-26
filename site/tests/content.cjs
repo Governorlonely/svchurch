@@ -1,0 +1,7 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const app={innerHTML:'',querySelector:()=>({value:''})};
+const ctx={document:{getElementById:()=>app,querySelector:()=>({classList:{remove(){}}}),addEventListener(){}},window:{addEventListener(){},scrollTo(){}},location:{hash:'#/'},console};vm.createContext(ctx);vm.runInContext(fs.readFileSync(require('path').join(__dirname,'../app.js'),'utf8'),ctx);
+for(const route of ['','locations','city/0','city/1','city/2','about','beliefs','courses','course/0','events','sermons','resources','children/0','children/1','donate','donate/0','donate/1','donate/2','donate/3','question/1/team','privacy','legal']){ctx.location.hash='#/'+route;vm.runInContext('render()',ctx);assert(app.innerHTML.length>200,route);console.log('OK',route||'home')}
+ctx.location.hash='#/city/0';vm.runInContext('render()',ctx);for(const x of ['ЙОХЦ','ул. Мира, 2','11:00','Александр Викторов','https://vk.ru/yoccenter','children/0','donate/0'])assert(app.innerHTML.includes(x),x);
+ctx.location.hash='#/city/1';vm.runInContext('render()',ctx);for(const x of ['Академика Лаврентьева, 17','10:00, 12:00 и 18:00','Сергей Горохов','question/1/team','donate/1'])assert(app.innerHTML.includes(x),x);
+ctx.location.hash='#/donate/2';vm.runInContext('render()',ctx);assert(!app.innerHTML.includes('href="https://qr.nspk.ru/'));console.log('Content and donation routing checks passed');
